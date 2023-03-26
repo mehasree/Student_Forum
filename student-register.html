@@ -7,24 +7,32 @@
   <title>STUDENT REGISTER</title>
 <style>
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color:rgb(250, 246, 246);
-}
-
-* {
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
   box-sizing: border-box;
 }
 
-.container {
-  padding: 10px;
-  background-color: white;
+.title{
+	font-size: 30px;
+	background-color: #04AA6D;
+	padding: 10px;
+	font-family:cursive;
+	color: #fff;
+  text-align: center;
+}
+
+form{
+  padding: 15px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 input[type=text], input[type=password], input[type=number] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
+  width: 97%;
+  display: block;
+  padding: 10px;
+  margin: 10px;
   border: none;
   background: #f1f1f1;
 }
@@ -34,16 +42,10 @@ input[type=text]:focus, input[type=password]:focus {
   outline: none;
 }
 
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
 .registerbtn {
-  background-color: #01313a;
+  background-color: #04AA6D;
   color: rgb(249, 255, 248);
   padding: 16px 20px;
-  margin: 8px 0;
   border: none;
   cursor: pointer;
   width: 100%;
@@ -58,31 +60,26 @@ a {
   color: dodgerblue;
 }
 
-.signin {
-  background-color: #f1f1f1;
+.signin{
   text-align: center;
 }
 </style>
 </head>
 <body>
+  <h2 class="title">STUDENT REGISTER</h2>
   <form action="student-register.php" method="post">
-  <div class="container">
-    <h1 style="text-align: center;">Register</h1>
     <label for="Name"><b>Name</b></label>
     <input type="text" placeholder="Enter Name" name="Name" id="Name" required>
     <label for="Email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email Id" name="Email" id="Email" required>
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-    <label for="Register-no"><b>Register No.</b></label>
-    <input type="number" placeholder="Enter Register number" name="Register-no" id="Register-no" required>
-    <label for="Dept"><b>Department</b></label>
-    <input type="text" placeholder="Enter Department" name="Dept" id="Dept" required>
+    <label for="Password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="Password" id="Password" required>
+    <label for="userid"><b>Student Id</b></label>
+    <input type="number" placeholder="Enter student Id" name="userid" id="userid" required>
     <button type="submit" class="registerbtn">Register</button>
-  </div>
-  <div class="container signin">
-    <p>Already have an account? <a href="index.html">Login</a></p>
-  </div>
 </form>
+<div class="container signin">
+  <p>Already have an account? <a href="index.html">Login</a></p>
+</div>
 </body>
 </html>

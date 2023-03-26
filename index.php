@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 else{
     $select='SELECT userid From student_db Where userid= ? and pass= ? Limit 1 ';
     $select1='SELECT userid From staff_db Where userid= ? and pass= ? Limit 1 ';
-    $insert='INSERT Into login_db(userid) values(?)';
+    $insert='INSERT Into login_db(userid,pass) values(?,?)';
     $stmt=$conn->prepare($select);
     $stmt->bind_param("ss",$userid,$pass);
     $stmt->execute();

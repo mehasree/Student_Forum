@@ -1,24 +1,23 @@
 <?php
 $email = $_POST['Email'];
-$password = $_POST['psw'];
-$regno = $_POST['Register-no'];
-$name  = $_POST['Name'];
-$department = $_POST['Dept'];
+$pass = $_POST['Password'];
+$userid = $_POST['userid'];
+$uname  = $_POST['Name'];
 
 $servername="localhost";
 $username="root";
 $password="";
 $dbname="student_forum";
 
-if (!empty($email) || !empty($password) || !empty($regno) || !empty($name) || !empty($department))
+if (!empty($email) || !empty($pass) || !empty($userid) || !empty($uname))
 {
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 else{
-  $select='SELECT email From student_register Where email = ? Limit 1';
-  $insert='INSERT Into student_register(uname,email,pass) values(?,?,?)';
+  $select='SELECT email From student_db Where email = ? Limit 1';
+  $insert='INSERT Into student_db(uname,email,pass,userid) values(?,?,?,?)';
   $stmt=$conn->prepare($select);
   $stmt->bind_param("s",$email);
   $stmt->execute();
@@ -29,10 +28,10 @@ else{
   {
       $stmt->close();
       $stmt=$conn->prepare($insert);
-      $stmt->bind_param("sss",$uname,$email,$pass);
+      $stmt->bind_param("ssss",$uname,$email,$pass,$userid);
       $stmt->execute();
       echo "Registration successful";
-      header("location: index.html");
+      header("location: homepage.html");
   }
   else{
   echo "Someone already registered using this email";
