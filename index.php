@@ -31,7 +31,7 @@ else{
         $stmt->bind_param("s",$userid);
         $stmt->execute();
         echo "Login successful";
-        header("location: index.html");
+        header("location: homepage.html");
     }
     $stmt->close();
     $conn->close();

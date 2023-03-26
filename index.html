@@ -15,35 +15,66 @@
     background-attachment:fixed;
     background-size:cover;
 	text-align: center;
+	font-family: cursive;
     }
+	#title{
+		font-size: 30px;
+		background-color: #04AA6D;
+		padding: 10px;
+		font-family:cursive;
+		color: #fff;
+	}
+	.c1{
+		font-size: 20px;
+		text-align: right;
+	}
+	.tb{
+		width: 300px;
+		padding: 10px;
+	}
+	.btn,.c5{
+		background-color: #04AA6D;
+		color: #fff;
+		border-radius: 5px;
+		border: 1px solid #04AA6D;
+		padding: 10px;
+		font-size: 20px;
+		width: 100px;
+	}
+	.c5{
+        width: 150px;
+	}
+	p{
+		font-size: 30px;
+	}
     </style>
 </head>
 <body>
 	<div id="main">
 	<div class="title">
-	<h2 style="text-align: center;">LOGIN</h2>
+	<h2 id="title" style="text-align: center;">LOGIN</h2>
 	</div>
-    <form method="post" action="login.php">
+    <form method="post" action="index.php">
 	<div class="login">
 	<table cellspacing="5px" cellpadding="8" style="margin-left: auto; margin-right: auto;">
 	<tr>
-	<td>User ID:</td>
+	<td class="c1">USER ID</td>
 	<td><input type="number" placeholder="Enter user Id" class="tb" id="UserId"/></td>
 	</tr>
 	<tr>
-	<td>Password:</td>
+	<td class="c1">PASSWORD</td>
 	<td><input type="password" placeholder="Enter password" class="tb" id="Password"/></td>
 	</tr>
-	<tr>
-	<td></td>
-	<td>
-	<input type="submit" value="Login" class="btn"/></td>
-	</tr>
 	</table>
+	<br>
+	<input type="submit" value="Login" class="btn"/>
 	</div>
     </form>
-    <button  onclick="window.location.href='student reg.html';">New student</button>
-    <button  onclick="window.location.href='staffreg.html';">New staff</button>
+	<div class="c3">
+	<p>Don't have an account?</p>
+    <button class="c5"  onclick="window.location.href='student-register.html';">New Student</button>
+    <button class="c5" onclick="window.location.href='staff-register.html';">New Staff</button>
+	</div>
 	</div>
   </body>
   </html>

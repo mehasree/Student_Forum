@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STUDENT REGISTER</title>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:rgb(250, 246, 246);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 10px;
+  background-color: white;
+}
+
+input[type=text], input[type=password], input[type=number] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.registerbtn {
+  background-color: #01313a;
+  color: rgb(249, 255, 248);
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+a {
+  color: dodgerblue;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+  <form action="student-register.php" method="post">
+  <div class="container">
+    <h1 style="text-align: center;">Register</h1>
+    <label for="Name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="Name" id="Name" required>
+    <label for="Email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email Id" name="Email" id="Email" required>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    <label for="Register-no"><b>Register No.</b></label>
+    <input type="number" placeholder="Enter Register number" name="Register-no" id="Register-no" required>
+    <label for="Dept"><b>Department</b></label>
+    <input type="text" placeholder="Enter Department" name="Dept" id="Dept" required>
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+  <div class="container signin">
+    <p>Already have an account? <a href="index.html">Login</a></p>
+  </div>
+</form>
+</body>
+</html>
